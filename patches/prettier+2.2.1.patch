@@ -1,0 +1,13 @@
+diff --git a/node_modules/prettier/index.js b/node_modules/prettier/index.js
+index ac945de..60632e2 100644
+--- a/node_modules/prettier/index.js
++++ b/node_modules/prettier/index.js
+@@ -40652,7 +40652,7 @@ function embed(path, print, textToDoc, options) {
+ function isMarkdown(path) {
+   const node = path.getValue();
+   const parent = path.getParentNode();
+-  return parent && parent.type === "TaggedTemplateExpression" && node.quasis.length === 1 && parent.tag.type === "Identifier" && (parent.tag.name === "md" || parent.tag.name === "markdown");
++  return parent && parent.type === "TaggedTemplateExpression" && node.quasis.length === 1 && parent.tag.type === "Identifier" && (parent.tag.name === "md" || parent.tag.name === "markdown" || parent.tag.name === "sql");
+ }
+ /**
+  * Template literal in these contexts:
